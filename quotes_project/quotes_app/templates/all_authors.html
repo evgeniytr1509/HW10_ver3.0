@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Authors</title>
+</head>
+<body>
+    <h1>All Authors</h1>
+    <ul>
+        {% for author in authors %}
+        <li>{{ author.name }}</li>
+        {% if author.biography is not None %}
+        <p>{{ author.biography }}</p>
+        {% else %}
+        <p>No biography available</p>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+
